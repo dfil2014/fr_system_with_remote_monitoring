@@ -1,0 +1,16 @@
+asyncio
+aiortc
+av
+aiohttp
+urllib3
+numpy
+ultralytics
+matplotlib
+Pillow
+scikit-image
+jupyterlab
+torch
+torchvision
+torchaudio
+opencv-python
+websockets

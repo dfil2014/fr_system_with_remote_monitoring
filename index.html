@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC webcam</title>
+    <style>
+
+    video {
+width: 100%;
+    }
+
+    .option {
+        margin-bottom: 8px;
+    }
+	#player
+	{
+		position: relative;
+        top: 0;
+        //right: 0;
+        bottom: 0;
+        left: 0;
+        //margin: auto;
+        width: 50%;
+		height:28vw;
+		background-color:gray;
+	}
+		#stop
+	{
+	display:block;
+	position:absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    height:20%;
+	background-image:url("imgs/stop.svg");
+	background-repeat: no-repeat;
+	width:10%;
+	cursor:pointer;
+	opacity:0.0;
+	}
+	#stop:hover{
+	opacity:0.7;
+	}
+	#start
+	{
+	display:block;
+	position:absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    height:20%;
+	background-image:url("imgs/play.svg");
+	background-repeat: no-repeat;
+	width:10%;
+	cursor:pointer;
+	opacity:0.7;
+	}
+	#start:hover{
+	opacity:1.0;
+	}
+	h2{
+	text-align:center;
+	}
+    #media {
+        //max-width: 1280px;
+		display:flex;
+    }
+	table{
+	position:relative;
+	border-collapse: collapse;
+width:100%;	
+	}
+	th,td{
+	border: 1px solid #000;
+	}
+	#table{
+	max-height:28vw;
+	overflow-y: auto; 
+	width:50%;
+	max-width:50%;
+	}
+    </style>
+</head>
+<body>
+
+
+<!--<button id="stop" style="display: none" onclick="stop()">Stop</button>-->
+<h2>Media</h2>
+<div id="media">
+	<div id="player">
+    <audio id="audio" autoplay="true"></audio>
+    <video id="video" autoplay="true" playsinline="true"></video>
+	<div id="start" onclick="start()"></div>
+	<div id="stop" style="display:none;" onclick="stop()"></div>
+	</div>
+	<div id="table">
+	<table id="recognition-result">
+<tr><th>Image</th><th>Defined</th><th>Label</th></tr>
+</table>
+</div>
+</div>
+
+<script src="client.js"></script>
+</body>
+</html>
